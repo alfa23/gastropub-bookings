@@ -28,8 +28,8 @@ class UserReg(models.Model):
     user = models.OneToOneField(
         User, on_delete=models.CASCADE, primary_key=True)
     email = models.EmailField(max_length=100)
-    f_name = models.CharField(max_length=25)
-    l_name = models.CharField(max_length=25)
+    first_name = models.CharField(max_length=25)
+    last_name = models.CharField(max_length=25)
     contact_no = PhoneField(blank=True, help_text='Contact phone number')
 
     def __str__(self):
