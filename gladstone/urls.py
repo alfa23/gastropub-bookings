@@ -1,4 +1,4 @@
-"""gladstone URL Configuration
+"""gladstone URL Configuration.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -22,4 +22,5 @@ urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
     path('', views.HomeView.as_view(), name='home'),
     path('menu/', views.MenuView.as_view(), name='menu'),
+    path('accounts/', include('allauth.urls')),
 ]
