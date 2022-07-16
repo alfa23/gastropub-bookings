@@ -9,6 +9,11 @@ body {
     color: #4A4A4F;
 }
 
+.btn-submit {
+    background-color: #445261;
+    color: #F9FAFC;
+}
+
 .custom-gray {
     background-color: #777;
 }
