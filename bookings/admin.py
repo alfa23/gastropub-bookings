@@ -18,7 +18,7 @@ class BookingAdmin(SummernoteModelAdmin):
         queryset.update(booking_confirmed=True)
 
 
-@admin.register(UserReg)
-class UserRegAdmin(admin.ModelAdmin):
-    list_display = ('user', 'email', 'first_name', 'last_name', 'contact_no')
-    search_fields = ('user', 'email', 'contact_no')
+# @admin.register(UserReg)
+# class UserRegAdmin(admin.ModelAdmin):
+#     list_display = ('email', 'first_name', 'last_name', 'contact_no')
+#     search_fields = ('email', 'contact_no')
