@@ -22,6 +22,18 @@ body {
     background-color: #445261;
 }
 
+.footer-copy {
+    font-family: Lato, sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
 .main-bg {
     background-color: #F9FAFC;
 }

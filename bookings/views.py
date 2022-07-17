@@ -21,6 +21,13 @@ class MenuView(TemplateView):
         return render(request, 'menu.html',)
 
 
+class ContactView(TemplateView):
+    template_name = 'contact.html'
+
+    def get(self, request, *args, **kwargs):
+        return render(request, 'contact.html',)
+
+
 class Booking(View):
     """ This class handles all booking through POST & GET requests """
     def get(self, request):
