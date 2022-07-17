@@ -2,7 +2,62 @@
 {% load static %}
 
 {% block content %}
-  <div>
-  <h1>Hello create!</h1>
-  </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2 text-center">
+            <h1>Make a Reservation:</h1>
+            <h4>Mon-Sun: Midday-9pm</h4>
+            <hr>
+        </div>
+    </div>
+    {% if user.is_authenticated %}
+    <div class="col-md-8 mt-3 offset-md-2 text-center">
+        <form class="row" method="POST">
+            {% csrf_token %}
+            <div class="col-md-6 offset-md-3">
+                <label for="first_name">First Name:</label>
+                <input type="text" class="form-control" id="first_name" name="first_name"
+                    value="{{ user.first_name }}" required>
+                <label for="last_name">Last Name</label>
+                <input type="text" class="form-control" id="last_name" name="last_name"
+                    value="{{ user.last_name }}" required>
+            </div>
+            <div class="col-md-6 offset-md-3">
+                <label for="contact_no">Contact Number:</label>
+                <input type="text" class="form-control" id="contact_no" name="contact_no" minlength="11" maxlength="13"
+                    value="{{ user.contact_no }}" required>
+            </div>
+            <div class="col-md-6 offset-md-3">
+                <label for="booking_covers">Number of Diners:</label>
+                <input type="number" class="form-control" id="booking_covers" name="booking_covers" min="1" max="16"
+                    value="2" required>
+                <p>Please <a href="{% url 'contact' %}">contact us</a> for parties larger than 16 diners.</p>
+            </div>
+            <div class="col-md-6 offset-md-3">
+                <label for="booking_date">Booking Date:</label>
+                <input type="date" class="form-control" id="booking_date", name="booking_date" required>
+            </div>
+            <div class="col-md-6 offset-md-3">
+                <label for="booking_time">Booking Time:</label>
+                <input type="time" class="form-control" id="booking_time", name="booking_time" min="12:00" max="21:00"
+                value="12:00" required>
+            </div>
+            <div class="col-md-6 offset-md-3">
+                <label for="booking_comment">Allergy & other information:</label>
+                <input type="text" class="form-control" id="booking_comment", name="booking_comment">
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-submit btn-confirm">Confirm Reservation</button>
+            </div>
+            {% else %}
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    Please <a href="{% url 'account_login' %}">sign in</a> or 
+                    <a href="{% url 'account_signup' %}">register</a> to make a reservation.
+                </div>
+            </div>
+            {% endif %}
+        </form>
+    </div>
+</div>
 {% endblock %}

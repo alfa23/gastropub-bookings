@@ -9,6 +9,11 @@ body {
     color: #4A4A4F;
 }
 
+.btn-confirm {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 .btn-submit {
     background-color: #445261;
     color: #F9FAFC;
@@ -34,6 +39,24 @@ body {
     text-decoration: none;
 }
 
+.hr-medium {
+    width: 66%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.hr-small {
+    width: 33%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
 .main-bg {
     background-color: #F9FAFC;
+}
+
+.template-link {
+    text-decoration: none;
+    color: #445261;
+    margin-bottom: 1rem;
 }

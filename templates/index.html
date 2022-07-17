@@ -4,10 +4,49 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
-                <img src="/media/home-banner.jpeg" class="img-fluid" alt="home banner food image">
-                <h1 class="text-center">Welcome to The Gladstone Arms</h1>
+        <div class="col-md-10 mt-3 offset-md-1 text-center">
+            <img src="/media/home-banner.jpeg" class="img-fluid" alt="home banner food image">
+            <h3>Welcome to</h3>
+            <h1>The Gladstone Arms</h1>
+            <hr>
+            <p>Hello and welcome to the Gladstone Arms. We are a country pub in the heart of the riverside town of Chippenham, 
+                set in the beautiful Wiltshire countryside. Come and enjoy our award-winning food in our restaurant or kick back and 
+                relax in our large garden; a stunning sun trap and the perfect place to enjoy some drinks and quality food.</p>
+            <p>Take a look at our menus below and we look forward to welcoming you soon...</p>
+            <hr class="hr-medium">
+            <h4>Opening times</h4>
+            <hr class="hr-small">
+            <h5>Monday - Saturday: 11am - 11pm</h5>
+            <p>Food Served: Midday - 9pm</p>
+            <h5>Sunday: 11am - 10pm</h5>
+            <p>Food Served: Midday - 9pm</p>
+            <hr>
         </div>
+        <div class="row text-center">
+            <div class="col">
+                <a class="template-link" href="{% url 'menu' %}"><i class="fas fa-utensils fa-3x"></i></a>
+                <h6>View Menu</h6>
+            </div>
+            {% if user.is_authenticated %}
+            <div class="col">
+                <a class="template-link" href="{% url 'create' %}"><i class="fas fa-calendar-alt fa-3x"></i></a>
+                <h6>Reservations</h6>
+            </div>
+            <div class="col">
+                <a class="template-link" href="{% url 'account_logout' %}"><i class="fas fa-sign-out-alt fa-3x"></i></a>
+                <h6>Sign Out</h6>
+            </div>
+            {% else %}
+            <div class="col">
+                <a class="template-link" href="{% url 'account_signup' %}"><i class="fas fa-user-plus fa-3x"></i></a>
+                <h6>Sign Up</h6>
+            </div>
+            <div class="col">
+                <a class="template-link" href="{% url 'account_login' %}"><i class="fas fa-sign-in-alt fa-3x"></i></a>
+                <h6>Sign In</h6>
+            </div>
+            {% endif %}
+          </div>
     </div>
 
 </div>

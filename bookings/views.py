@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, reverse, redirect
 # Import Django generic library, import Template View from views.generic
 # from django.views import generic
 from django.views.generic import TemplateView
@@ -29,6 +29,27 @@ class ContactView(TemplateView):
 
 
 class Booking(View):
-    """ This class handles all booking through POST & GET requests """
+    """ This class handles all booking through POST & GET requests. """
+
     def get(self, request):
         return render(request, 'bookings/create.html', {})
+
+    # def post(self, request):
+    #     booking_covers = request.POST.get("booking_covers")
+    #     booking_date = request.POST.get("booking_date")
+    #     booking_time = request.POST.get("booking_time")
+    #     booking_comment = request.POST.get("booking_comment")
+    #     booking_id = request.POST.get("booking_id")
+
+    #     web_booking = Booking.objects.create(
+    #         booking_covers=booking_covers,
+    #         booking_date=booking_date,
+    #         booking_time=booking_time,
+    #         booking_comment=booking_comment,
+    #         booking_id=request.booking_id
+    #     )
+
+    #     web_booking.save()
+
+    #     # return redirect(reverse(''))
+
