@@ -4,9 +4,40 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-10 mt-3 offset-md-1 text-center">
-                <h1>See Contact Page Here</h1>
+        <div class="container-lg mt-3 text-center">
+            <h1>The Gladstone Arms</h1>
+            <hr>
+            <img src="https://res.cloudinary.com/alfa23/image/upload/v1658329215/media/contact-banner_pecn4d.jpg" class="img-fluid" alt="contact banner food image">
+            <h2 id="page-subhead">Contact Form</h2>
+            <hr>
+            <p>Blurb</p>
         </div>
+        <hr>
+        <div class="row text-center">
+            <div class="col">
+                <a class="template-link" href="{% url 'menu' %}"><i class="fas fa-utensils fa-3x"></i></a>
+                <h6>View Menu</h6>
+            </div>
+            {% if user.is_authenticated %}
+            <div class="col">
+                <a class="template-link" href="{% url 'create' %}"><i class="fas fa-calendar-alt fa-3x"></i></a>
+                <h6>Reservations</h6>
+            </div>
+            <div class="col">
+                <a class="template-link" href="{% url 'account_logout' %}"><i class="fas fa-sign-out-alt fa-3x"></i></a>
+                <h6>Sign Out</h6>
+            </div>
+            {% else %}
+            <div class="col">
+                <a class="template-link" href="{% url 'account_signup' %}"><i class="fas fa-user-plus fa-3x"></i></a>
+                <h6>Sign Up</h6>
+            </div>
+            <div class="col">
+                <a class="template-link" href="{% url 'account_login' %}"><i class="fas fa-sign-in-alt fa-3x"></i></a>
+                <h6>Sign In</h6>
+            </div>
+            {% endif %}
+          </div>
     </div>
 
 </div>

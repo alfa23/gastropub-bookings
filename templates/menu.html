@@ -4,8 +4,189 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-10 mt-3 offset-md-1 text-center">
-            <h1>See Menu Page Here</h1>
+        <div class="container-lg mt-3 text-center">
+            <h1>The Gladstone Arms</h1>
+            <hr>
+            <img src="https://res.cloudinary.com/alfa23/image/upload/v1658329215/media/menu-banner_wtw1lp.jpg" class="img-fluid" alt="menu banner food image">
+            <h2 id="page-subhead">Menu</h2>
+            {% if user.is_authenticated %}
+            <a href="{% url 'create' %}" class="btn btn-reservation">Make a Reservation</a>
+            {% else %}
+            <p>Please <a href="{% url 'account_signup' %}" class="template-link">sign up </a>or
+                <a href="{% url 'account_login' %}" class="template-link">sign in </a>
+                to make a reservation.
+            </p>
+            {% endif %}
+            <hr>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Starters, Ciabattas & Burgers</h5>
+                            <hr>
+                            <h6 class="card-subtitle">Starters</h6>
+                            <hr>
+                            <p class="card-text">
+                                Garlic Mushrooms in Creamy Stilton Sauce, Toasted Sourdough (v) £7.00<br><br>
+                                Chicken Liver Parfait, Toasted Brioche, Red Onion Marmalade (gfo) £8.00<br><br>
+                                Tempura Tiger Prawns, Sweet Chilli Jam, Asian Salad (gf) £9.00<br><br>
+                                Tempura Mixed Vegetables, Sweet Chilli Jam, Asian Salad (vg/gf) £6.50<br><br>
+                                Classic Prawn Cocktail, Brown Bread (gfo) £8.00<br><br>
+                                The Gladstone Scotch Egg, Piccalilli, Mixed Leaves £8.50<br><br>
+                                Breaded Goats Cheese Salad, Red Onion Marmalade (v,gf) £7.00<br><br>
+                            </p>
+                            <hr>
+                            <h6 class="card-subtitle">Ciabattas</h6>
+                            <br>
+                            <h6 class="card-subtitle text-muted">MON-SUN 12PM-6PM<br>
+                                (SERVED WITH MIXED LEAVES AND COLESLAW)</h6>
+                            <hr>
+                            <p class="card-text">
+                                Halloumi, Roast Pepper & Spinach (v) £9.00<br><br>
+                                Rump Steak, Stilton & Mushroom £11.00<br><br>
+                                BBQ Pulled Pork, Melted Cheddar Cheese £9.00<br><br>
+                                Stilton & Mushroom (v) £8.00<br><br>
+                                Goats Cheese, Red Onion Marmalade & Spinach (v) £9.00<br><br>
+                                Chicken & Bacon Club Style £9.00<br><br>
+                            </p>
+                            <hr>
+                            <h6 class="card-subtitle">Burgers £13.50</h6>
+                            <br>
+                            <h6 class="card-subtitle text-muted">(SERVED IN A BRIOCHE BUN WITH BURGER SAUCE,
+                                LETTUCE, TOMATO AND FINISHED WITH A PICKLE. SERVED WITH FRENCH FRIES)</h6>
+                            <hr>
+                            <p class="card-text">
+                                Beef Burger with BBQ Pulled Pork and Melted Cheese<br><br>
+                                Beef Burger with Bacon, Stilton and Mushroom<br><br>
+                                Breaded Chicken Burger topped with Bacon and
+                                Melted Cheese (gfo)<br><br>
+                                Spicy Veggie Burger with Mushrooms (vgo)<br><br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Main Courses & Steaks</h5>
+                            <hr>
+                            <h6 class="card-subtitle">Main Courses</h6>
+                            <hr>
+                            <p class="card-text">
+                                Beer Battered Cod, Chunky Chips, Peas, Tartare Sauce (gfo) £14<br><br>
+                                Wholetail Scampi, Chunky Chips, Peas, Tartare Sauce £13<br><br>
+                                Thai Green Curry with Jasmine Rice (Chicken or vg/gf/df) £13.50<br><br>
+                                Sweet Chilli Chicken & Bacon Salad (gfo) £13<br><br>
+                                Breaded Goats Cheese Salad (gfo) £13<br><br>
+                                Grilled Hallouimi Salad (gfo) £13<br><br>
+                                Spicy Grilled Chicken Breast, Sweet Potato Wedges,
+                                Iceberg lettuce, Tomato Salsa, Jalapenos, guacamole,
+                                Sour Cream, Crushed Tortilla (gfo) £13.50<br><br>
+                                Herb Crusted Rump Of Lamb, Roasted Mediterranean Vegetables,
+                                Jus (gf) £19<br>(eves only)<br><br>
+                                Cider Braised Pork Belly, Colcannon, Honey Roasted Carrots,
+                                Jus (gf) £19<br>(eves only)<br><br>
+                                Sea-bass Fillets, Saag Aloo, Pea & Mint Sauce,
+                                Curry Oil (gf) £18.50<br>(eve’s only)<br><br>
+                                Chicken, Leek & Pancetta Pie, With Chips Or Mash, Crushed Peas
+                                & Gravy £15<br><br>
+                                Mushroom, Leek And Cheddar Tart, Crushed New Potatoes, Salad (v) £13<br><br>
+                                Cajun Spiced Sweet Potato Roulade, Chunky Chips, Salad (vg) (gf) £13<br><br>
+                            </p>
+                            <hr>
+                            <h6 class="card-subtitle">Steaks</h6>
+                            <br>
+                            <h6 class="card-subtitle text-muted">(SERVED WITH CHUNKY CHIPS, MUSHROOMS, VINE TOMATOES AND ROCKET)</h6>
+                            <hr>
+                            <p class="card-text">
+                                Rump (8oz/14oz) £16/£26<br><br>
+                                Ribeye (10oz) £21<br><br>
+                                Fillet (6oz) £21<br><br>
+                                Sirloin (10oz) £21<br><br>
+                                T-Bone (16oz) £31<br><br>
+                                Chateaubriand (12oz) £46<br><em>For Two People</em><br><br>
+                                <strong>The Mixed Grill:</strong> 4oz Rump Steak, 6oz Gammon Steak, Whole Chicken
+                                Breast, Gloucester Old Spot Sausage, Fried Egg, Pineapple, Peas £26<br><br>
+                                Gammon Steak (12oz), Pineapple, Fried Egg, Peas, Chunky Chips <em>(not
+                                served with mushrooms, vine tomatoes & rocket)</em> £15<br><br>
+                                <em>Add a Pepper, Bearnaise, Diane or Stilton sauce</em> £3.50 each<br><br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Side Orders, Desserts & Sunday Roast</h5>
+                            <hr>
+                            <h6 class="card-subtitle">Side Orders</h6>
+                            <hr>
+                            <p class="card-text">
+                                Chunky Chips £3.50<br>
+                                FrenchFries £3.00<br>
+                                Sweet Potato Wedges £3.50<br>
+                                Side Salad £4.00<br>
+                                Garlic Ciabatta £3.50<br>
+                                Onion Rings £3.50<br>
+                                Coleslaw £2.00<br><br>
+                            </p>
+                            <hr>
+                            <h6 class="card-subtitle">Dessert £6.50 (£3.25 half portion)</h6>
+                            <hr>
+                            <p class="card-text">Cheese & Biscuits (£8.50/£4.25)<br><br>
+                                Warm Chocolate Brownie, Vanilla Ice Cream, Raspberries (gf)<br><br>
+                                Raspberry & White Chocolate Bread & Butter Pudding with Custard<br><br>
+                                Creme Brûlée, Raspberries (gf)<br><em>(no half portion available)</em><br><br>
+                                Meryl’s Choc Chip Banana bread, Stewed Berries, Vanilla Ice cream (vg)<br><br>
+                                Marshfield Ice Cream Selection £1.50 Per Scoop <em>Choose From:</em><br>
+                                <em>Vanilla (dfo), Salted caramel, Chocolate Cookies & Cream, 
+                                Strawberry, White Chocolate & Honeycomb</em><br><br>
+                            </p>
+                            <hr>
+                            <h6 class="card-subtitle">Sunday Roasts</h6>
+                            <br>
+                            <h6 class="card-subtitle text-muted">(OUR ROAST LUNCHES ARE SERVED WITH ROASTED POTATOES, CARROTS,
+                                PARSNIP AND BUTTERNUT SQUASH, SAVOY CABBAGE, CAULIFLOWER CHEESE,
+                                YORKSHIRE PUDDING AND GRAVY)<br><br><em>Choose from..:</em></h6>
+                            <hr>
+                            <p class="card-text">Beef Sirloin £17<br><em>Smaller:</em> £14.50<br><br>
+                                Leg of Lamb £16<br><em>Smaller:</em> £14.50<br><br>
+                                Crisp Cider Braised Pork Belly £16<br><em>Smaller:</em> £14<br><br>
+                                Cajun Spiced Sweet Potato Roulade (vg) £16<br><em>Smaller:</em> £14<br><br>
+                            </p>
+                            <hr>
+                            <br>
+                            <h6 class="card-subtitle">gf = gluten free<br>gfo = gluten free option available<br><br>df = dairy free<br>
+                                dfo - dairy free option available<br><br>vg = vegan<br>vgo = vegan option available<br><br>v = vegetarian</h6><br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="col-lg-10 offset-lg-1 text-center">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Takeaway Information:</h5>
+                        <p class="card-text">We are still serving takeaways, when we are not too busy in the
+                            restaurant! Most of this menu is available all day everyday
+                            for you to call up and order; the more advance notice you can give,
+                            the more likely we can accomodate you!
+                        </p>
+                        <hr class="hr-medium">
+                        <p>Please call us on <strong>01249 660 535</strong> to place an order or if you require any further information.</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            {% if user.is_authenticated %}
+            <a href="{% url 'create' %}" class="btn btn-reservation">Make a Reservation</a>
+            {% else %}
+            <p>Please <a href="{% url 'account_signup' %}" class="template-link">sign up </a>or
+                <a href="{% url 'account_login' %}" class="template-link">sign in </a>
+                to make a reservation.
+            </p>
+            {% endif %}
+            <hr>
         </div>
     </div>
 
