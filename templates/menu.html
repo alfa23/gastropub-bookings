@@ -4,20 +4,23 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="container-lg mt-3 text-center">
-            <h1>The Gladstone Arms</h1>
+        <img src="https://res.cloudinary.com/alfa23/image/upload/v1658329215/media/menu-banner_wtw1lp.jpg" class="img-fluid" alt="menu banner food image">
+        <div class="col-lg-10 mt-3 offset-lg-1 text-center">
             <hr>
-            <img src="https://res.cloudinary.com/alfa23/image/upload/v1658329215/media/menu-banner_wtw1lp.jpg" class="img-fluid" alt="menu banner food image">
+            <h1>The Gladstone Arms</h1>
             <h2 id="page-subhead">Menu</h2>
+            <hr class="hr-small">
             {% if user.is_authenticated %}
-            <a href="{% url 'create' %}" class="btn btn-reservation">Make a Reservation</a>
+            <a href="{% url 'create' %}" class="btn btn-reservation btn-confirm">Make a Reservation</a>
             {% else %}
-            <p>Please <a href="{% url 'account_signup' %}" class="template-link">sign up </a>or
+            <p><strong>Please <a href="{% url 'account_signup' %}" class="template-link">sign up </a>or
                 <a href="{% url 'account_login' %}" class="template-link">sign in </a>
-                to make a reservation.
+                to make a reservation.</strong>
             </p>
             {% endif %}
             <hr>
+        </div>
+        <div class="container-lg text-center">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="card">
@@ -162,8 +165,8 @@
                     </div>
                 </div>
             </div>
-            <hr>
             <div class="col-lg-10 offset-lg-1 text-center">
+                <hr>
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Takeaway Information:</h5>
@@ -179,17 +182,17 @@
             </div>
             <hr>
             {% if user.is_authenticated %}
-            <a href="{% url 'create' %}" class="btn btn-reservation">Make a Reservation</a>
+            <a href="{% url 'create' %}" class="btn btn-reservation btn-confirm">Make a Reservation</a>
             {% else %}
-            <p>Please <a href="{% url 'account_signup' %}" class="template-link">sign up </a>or
+            <br>
+            <p class="text-center"><strong>Please <a href="{% url 'account_signup' %}" class="template-link">sign up </a>or
                 <a href="{% url 'account_login' %}" class="template-link">sign in </a>
-                to make a reservation.
+                to make a reservation.</strong>
             </p>
             {% endif %}
-            <hr>
         </div>
     </div>
-
+    <br>
 </div>
 
 {%endblock%}

@@ -19,12 +19,12 @@ if os.path.isfile('env.py'):
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+
 # Code for custom Django allauth Signup form sourced & ammended from:
 # https://www.geeksforgeeks.org/python-extending-and-customizing-django-allauth/
 ACCOUNT_FORMS = {
     'signup': 'bookings.forms.MyCustomSignupForm',
 }
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -36,7 +36,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['pp04-gladstone.herokuapp.com', 'localhost']
-
 
 # Application definition
 

@@ -4,11 +4,12 @@
 {% block content %}
 <div class="container-fluid">
     <div class="row">
-        <div class="container-lg mt-3 text-center">
-            <h1>The Gladstone Arms</h1>
+        <img src="https://res.cloudinary.com/alfa23/image/upload/v1658329215/media/bookings-banner_xkrqkh.jpg" class="img-fluid" alt="reservation banner food image">
+        <div class="col-lg-10 mt-3 offset-lg-1 text-center">
             <hr>
-            <img src="https://res.cloudinary.com/alfa23/image/upload/v1658329215/media/bookings-banner_xkrqkh.jpg" class="img-fluid" alt="reservation banner food image">
+            <h1>The Gladstone Arms</h1>
             <h2 id="page-subhead">Make a Reservation</h2>
+            <hr class="hr-small">
             <h5>Mon-Sun: Midday-9pm</h5>
             <hr>
         </div>
@@ -20,16 +21,21 @@
             <div class="col-md-6 offset-md-3">
                 <label for="first_name">First Name:</label>
                 <input type="text" class="form-control" id="first_name" name="first_name"
-                    value="{{ user.first_name }}" required>
+                    value="{{ user.first_name }}" disabled>
                 <label for="last_name">Last Name:</label>
                 <input type="text" class="form-control" id="last_name" name="last_name"
-                    value="{{ user.last_name }}" required>
+                    value="{{ user.last_name }}" disabled>
             </div>
             <div class="col-md-6 offset-md-3">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email"
+                    value="{{ user.email }}" disabled>
+            </div>
+            <!-- <div class="col-md-6 offset-md-3">
                 <label for="contact_no">Contact Number:</label>
                 <input type="text" class="form-control" id="contact_no" name="contact_no" minlength="11" maxlength="13"
-                    value="{{ user.contact_no }}" required>
-            </div>
+                    value="{{ user.contact_no }}" disabled>
+            </div> -->
             <div class="col-md-6 offset-md-3">
                 <label for="booking_covers">Number of Diners:</label>
                 <input type="number" class="form-control" id="booking_covers" name="booking_covers" min="1" max="16"
@@ -47,7 +53,7 @@
             </div>
             <div class="col-md-6 offset-md-3">
                 <label for="booking_comment">Allergy & other information:</label>
-                <input type="text" class="form-control" id="booking_comment", name="booking_comment">
+                <input type="text" class="form-control" id="booking_comment", name="booking_comment" maxlength="500">
             </div>
             <div class="text-center">
                 <button type="submit" class="btn btn-reservation btn-confirm">Confirm Reservation</button>

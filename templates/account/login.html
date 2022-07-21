@@ -7,27 +7,33 @@
 
 {% block content %}
 
-<div class="container">
+<div class="container-fluid text-center">
   <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2">
-      <h3>{% trans "Sign In" %}</h3>
-      <p>{% blocktrans %}Thanks for using <strong>Gladstone Reservations</strong> online. To create, edit or
-        delete a booking, please sign in. If you have not created an account yet, then please
-        <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}
+    <div class="col-lg-10 mt-3 offset-lg-1">
+      <h1>The Gladstone Arms</h1>
+      <h3>{% trans "Account Sign In" %}</h3>
+      <hr class="hr-small">
+      <p>{% blocktrans %}Thanks for using <strong>Gladstone Reservations</strong> online.<br>To create, edit or
+        delete a booking, please sign in below.
       </p>
+      <hr class="hr-small">
+      <p>If you have not created an account yet, then please
+        <a href="{{ signup_url }}" class="template-link">sign up</a> first.{% endblocktrans %}
+      </p>
+      <hr>
     </div>
   </div>
   <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2">
-
+    <div>
     <form class="login" method="POST" action="{% url 'account_login' %}">
       {% csrf_token %}
       {{ form.as_p }}
       {% if redirect_field_value %}
       <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
       {% endif %}
-      <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-      <button class="btn btn-submit right" type="submit">{% trans "Sign In" %}</button>
+      <button class="btn btn-submit right" type="submit">{% trans "Sign In" %} &raquo;</button>
+      <!-- <br><br>
+      <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a> -->
     </form>
     </div>
   </div>
