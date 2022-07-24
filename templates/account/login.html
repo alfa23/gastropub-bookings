@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% load i18n %}
-{% load account socialaccount %}
 
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
@@ -18,7 +17,7 @@
       </p>
       <hr class="hr-small">
       <p>If you have not created an account yet, then please
-        <a href="{{ signup_url }}" class="template-link">sign up</a> first.{% endblocktrans %}
+        <a href="{{ signup_url }}" class="template-link"><strong>sign up</strong></a> first.{% endblocktrans %}
       </p>
       <hr>
     </div>

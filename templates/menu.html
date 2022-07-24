@@ -13,9 +13,8 @@
             {% if user.is_authenticated %}
             <a href="{% url 'create' %}" class="btn btn-reservation btn-confirm">Make a Reservation</a>
             {% else %}
-            <p><strong>Please <a href="{% url 'account_signup' %}" class="template-link">sign up </a>or
-                <a href="{% url 'account_login' %}" class="template-link">sign in </a>
-                to make a reservation.</strong>
+            <p>Please <a href="{% url 'account_signup' %}" class="template-link"><strong>register</strong> </a>or
+                <a href="{% url 'account_login' %}" class="template-link"><strong>sign in</strong></a> to make a reservation.
             </p>
             {% endif %}
             <hr>
@@ -170,10 +169,9 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Takeaway Information:</h5>
-                        <p class="card-text">We are still serving takeaways, when we are not too busy in the
-                            restaurant! Most of this menu is available all day everyday
-                            for you to call up and order; the more advance notice you can give,
-                            the more likely we can accomodate you!
+                        <p class="card-text">We are still serving takeaways, when we are not too busy in the restaurant! 
+                            Most of this menu is available all day everyday for you to call up and order; the more advance 
+                            notice you can give, the more likely we can accomodate you!
                         </p>
                         <hr class="hr-medium">
                         <p>Please call us on <strong>01249 660 535</strong> to place an order or if you require any further information.</p>
@@ -185,9 +183,8 @@
             <a href="{% url 'create' %}" class="btn btn-reservation btn-confirm">Make a Reservation</a>
             {% else %}
             <br>
-            <p class="text-center"><strong>Please <a href="{% url 'account_signup' %}" class="template-link">sign up </a>or
-                <a href="{% url 'account_login' %}" class="template-link">sign in </a>
-                to make a reservation.</strong>
+            <p class="text-center">Please <a href="{% url 'account_signup' %}" class="template-link"><strong>register</strong> </a>or
+                <a href="{% url 'account_login' %}" class="template-link"><strong>sign in</strong></a> to make a reservation.
             </p>
             {% endif %}
         </div>
